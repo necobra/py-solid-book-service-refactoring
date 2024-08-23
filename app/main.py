@@ -33,11 +33,13 @@ class ReverseContentType(OutputContentType):
 
 class DisplayOutput(OutputBookHandler):
     def output(self, book: Book, output_type: OutputContentType) -> str:
+        print(f"Displaying the book: {book.title}...")
         print(output_type.format(book.content))
 
 
 class PrintOutput(OutputBookHandler):
     def output(self, book: Book, output_type: OutputContentType) -> str:
+        print(f"Printing the book: {book.title}...")
         print(output_type.format(book.content))
 
 
